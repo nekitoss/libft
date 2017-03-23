@@ -14,7 +14,7 @@ CC = gcc
 
 NAME = libft.a
 
-CFLAGS = -Wall -Werror -Wextra -I$(INCL) -c 
+CFLAGS = -Wall -Werror -Wextra -I$(INCL) -c
 
 SRC = ft_bzero.c\
 		ft_isdigit.c\
@@ -79,23 +79,27 @@ SRC = ft_bzero.c\
 		ft_lstiter.c\
 		ft_lstmap.c
 
-BIN = $(SRC:.c=.o)
+OBJ = $(SRC:.c=.o)
 
 INCL = ./libft.h
 
 .PHONY: clean fclean re
 
-$(NAME):
-	$(CC) $(CFLAGS) $(SRC)
-	ar rc $(NAME) $(BIN)
+$(NAME): $(OBJ)
+	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
+	@echo  "\x1b[32mLibrary compilation finished\x1b[0m"
+%.o: %.c
+	$(CC) $(CFLAGS) -o $@ $<
 
 all: $(NAME) 
 	
 clean:
-	/bin/rm -f $(BIN)
+	/bin/rm -f $(OBJ)
+	@echo "\033[01;31mObject files deleted\x1b[0m"
 
 fclean: clean
-	/bin/rm -f $(NAME)	
+	/bin/rm -f $(NAME)
+	@echo "\033[01;31mFile Libtf.a deleted\x1b[0m"
 
 re: fclean all
