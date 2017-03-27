@@ -18,6 +18,6 @@ char	*ft_strnew(size_t size)
 
 	if (!(str = (char*)malloc(sizeof(char) * (size + 1))))
 		return (NULL);
-	ft_bzero(str, str + 1);
+	ft_bzero(str, size + 1);
 	return (str);
 }
