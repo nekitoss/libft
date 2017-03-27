@@ -17,20 +17,20 @@ char	*ft_strchr(char *s, int c)
 	size_t i;
 
 	i = 0;
-    if (s)
-    {
-        if (c != 0)
-        {
-            while (s[i] != '\0')
-            {
-                if (s[i] != c)
-                    i++;
-                else
-                    return (&s[i]);
-            }
-        }
-        else
-            return (&s[ft_strlen(s)]);
-    }
+	if (s)
+	{
+		if (c != 0)
+		{
+			while (s[i] != '\0')
+			{
+				if (s[i] != c)
+					i++;
+				else
+					return (&s[i]);
+			}
+		}
+		else
+			return (&s[ft_strlen(s)]);
+	}
 	return (NULL);
 }
