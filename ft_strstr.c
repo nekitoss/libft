@@ -20,16 +20,19 @@ char	*ft_strstr(const char *big, const char *s2)
 
 	if (s2[0] != '\0' && s2 != NULL)
 	{
-		max_len = ft_strlen(big) - ft_strlen(s2);
-		b = 0;
-		while (big[b] != '\0' && b <= max_len)
+		if (big)
 		{
-			l = 0;
-			while (big[b] != '\0' && s2[l] != '\0' && big[b + l] == s2[l])
-				l++;
-			if (s2[l] == '\0')
-				return ((char *)(&big[b]));
-			b++;
+			max_len = ft_strlen(big) - ft_strlen(s2);
+			b = 0;
+			while (big[b] != '\0' && b <= max_len)
+			{
+				l = 0;
+				while (big[b] != '\0' && s2[l] != '\0' && big[b + l] == s2[l])
+					l++;
+				if (s2[l] == '\0')
+					return ((char *)(&big[b]));
+				b++;
+			}
 		}
 		return (NULL);
 	}
