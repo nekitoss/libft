@@ -77,7 +77,10 @@ SRC = ft_bzero.c\
 		ft_lstdel.c\
 		ft_lstdelone.c\
 		ft_lstiter.c\
-		ft_lstmap.c
+		ft_lstmap.c\
+		ft_itoa_base.c\
+		ft_strjoin_d.c\
+		get_next_line.c
 
 OBJ = $(SRC:.c=.o)
 
