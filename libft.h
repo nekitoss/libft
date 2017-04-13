@@ -16,6 +16,9 @@
 # define ABS(x) ((x < 0) ? (-x) : (x))
 # define BUFF_SIZE 500000
 
+# include <string.h>
+# include <stdio.h>
+# include <fcntl.h>
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
