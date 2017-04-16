@@ -23,23 +23,29 @@
 
 char	*ft_strjoin_d(char **s1, char **s2, int del)
 {
-	char	*new_str;
+	char	*new;
 	size_t	i;
+	char *one;
+	char *two;
 
 	i = 0;
-	if (*s1 && *s2)
+	one = *s1;
+	two = *s2;
+	if (one && two && (new = ft_strnew(ft_strlen(one) + ft_strlen(two) + 1)))
 	{
-		new_str = ft_strnew(ft_strlen(*s1) + ft_strlen(*s2) + 1);
-		if (new_str)
-		{
-			while (**s1)
-				new_str[i++] = **s1++;
-			while (**s2)
-				new_str[i++] = **s2++;
+			while (*one)
+			{
+				new[i++] = *one;
+				one++;
+			}
+			while (*two)
+			{
+				new[i++] = *two;
+				two++;
+			}
 			(del == 1 || del == 3) ? ft_strdel(s1) : 0;
 			(del == 2 || del == 3) ? ft_strdel(s2) : 0;
-			return (new_str);
-		}
+			return (new);
 	}
 	return (NULL);
 }
