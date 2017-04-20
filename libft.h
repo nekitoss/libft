@@ -14,6 +14,7 @@
 
 # define LIBFT_H
 # define ABS(x) ((x < 0) ? (-x) : (x))
+# define MIN(a, b) ((a < b) ? a : b)
 # define BUFF_SIZE 500000
 
 # include <string.h>
@@ -109,4 +110,5 @@ int				get_next_line(int fd, char **line);
 int				ft_cntchr(char *str, char c);
 char			*ft_realloc(char **str, size_t new_len);
 void			*ft_newarr(size_t num);
+size_t			ft_arrlen(char **arr);
 #endif
