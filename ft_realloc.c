@@ -19,16 +19,16 @@
 
 #include "libft.h"
 
-char			*ft_realloc(char **str, size_t new_len)
+char			*ft_realloc(char **str, size_t len)
 {
 	char	*new_str;
 
 	new_str = NULL;
 	if (str && *str)
 	{
-		new_str = ft_memmove(ft_strnew(new_len), *str, new_len);
+		new_str = ft_memmove(ft_strnew(len), *str, MIN(ft_strlen(*str), len));
 		ft_strdel(str);
 		return (new_str);
 	}
-	return (ft_strnew(new_len));
+	return (ft_strnew(len));
 }
