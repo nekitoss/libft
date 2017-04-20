@@ -82,7 +82,8 @@ SRC = ft_bzero.c\
 		ft_strjoin_d.c\
 		get_next_line.c\
 		ft_cntchr.c\
-		ft_realloc.c
+		ft_realloc.c\
+		ft_newarr.c
 
 OBJ = $(SRC:.c=.o)
 

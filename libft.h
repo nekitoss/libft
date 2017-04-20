@@ -108,4 +108,5 @@ char			*ft_strjoin_d(char **s1, char **s2, int del);
 int				get_next_line(int fd, char **line);
 int				ft_cntchr(char *str, char c);
 char			*ft_realloc(char **str, size_t new_len);
+void			*ft_newarr(size_t num);
 #endif
