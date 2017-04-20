@@ -10,9 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** function counts number of occurence of char in string
+** if string is not given it returns -1
+*/
+
 #include "libft.h"
 
-int				ft_count(char *str, char c)
+int				ft_cntchr(char *str, char c)
 {
 	int res;
 

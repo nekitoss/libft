@@ -106,5 +106,5 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 char			*ft_itoa_base(long long value, int base);
 char			*ft_strjoin_d(char **s1, char **s2, int del);
 int				get_next_line(int fd, char **line);
-int				ft_count(char *str, char c);
+int				ft_cntchr(char *str, char c);
 #endif
