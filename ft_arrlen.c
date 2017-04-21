@@ -20,16 +20,12 @@
 size_t			ft_arrlen(void **arr)
 {
 	size_t	len;
-	void	*tmp;
 
-	tmp = NULL;
 	len = 0;
 	if (arr)
 	{
-		tmp = *arr;
-		while (tmp != NULL)
+		while (arr[len] != NULL)
 		{
-			tmp++;
 			len++;
 		}
 	}
