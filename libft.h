@@ -110,5 +110,6 @@ int				get_next_line(int fd, char **line);
 int				ft_cntchr(char *str, char c);
 char			*ft_realloc(char **str, size_t new_len);
 void			*ft_newarr(size_t num);
-size_t			ft_arrlen(char **arr);
+size_t			ft_arrlen(void **arr);
+void			**ft_extarr(void **old, size_t num);
 #endif
