@@ -17,7 +17,7 @@
 
 #include "libft.h"
 
-void			*ft_newarr(size_t num)
+void			**ft_newarr(size_t num)
 {
-	return (ft_memalloc(sizeof(void *) * (num + 1)));
+	return ((void **)ft_memalloc(sizeof(void *) * (num + 1)));
 }
