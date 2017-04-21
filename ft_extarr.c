@@ -26,7 +26,8 @@ void			**ft_extarr(void **old, size_t num)
 	new = NULL;
 	if (old)
 	{
-		new = ft_memmove(ft_newarr(num), old,
+		new = ft_newarr(num);
+		new = ft_memmove(new, old,
 			sizeof(void *) * MIN((ft_arrlen(old)), num));
 		free(old);
 		old = NULL;
