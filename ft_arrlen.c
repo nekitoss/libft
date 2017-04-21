@@ -24,7 +24,7 @@ size_t			ft_arrlen(void **arr)
 
 	tmp = NULL;
 	len = 0;
-	if (arr && *arr)
+	if (arr)
 	{
 		tmp = *arr;
 		while (tmp != NULL)
