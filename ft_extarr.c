@@ -33,15 +33,15 @@ void			**ft_extarr(void **arr, size_t num)
 		new = (char **)ft_newarr(num);
 		len = ft_arrlen((void *)old);
 		len = MIN(len, num);
-		// new = ft_memmove(new, old, sizeof(void *) * len);
-		while (len >= 0)
+		while (len > 0)
 		{
 			new[len] = old[len];
-			len --;
+			len--;
 		}
+		new[len] = old[len];
 		free(old);
 		old = NULL;
-		return (new);
+		return ((void **)new);
 	}
 	return (ft_newarr(num));
 }
