@@ -30,5 +30,6 @@ void			ft_arrdel(void ***arr)
 		ft_memdel(&(ptr[len]));
 		len--;
 	}
-	ft_memdel(&(ptr[len]));
+	free(*ptr);
+	*arr = NULL;
 }
