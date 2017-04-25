@@ -37,7 +37,7 @@ void			**ft_extarr(void **old, size_t num)
 			len--;
 		}
 		new[len] = old[len];
-		free(old);
+		ft_arrdel(&old);
 		old = NULL;
 		return (new);
 	}
