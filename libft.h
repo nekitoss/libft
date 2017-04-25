@@ -15,7 +15,7 @@
 # define LIBFT_H
 # define ABS(x) ((x < 0) ? (-x) : (x))
 # define MIN(a, b) ((a < b) ? a : b)
-# define BUFF_SIZE 500000
+# define BUFF_SIZE 1000
 
 # include <string.h>
 # include <stdio.h>
@@ -27,16 +27,16 @@
 typedef struct	s_lost
 {
 	char			*str;
-	int				r_len;
 	char			*clr;
 	int				end;
+	int				r_len;
 }				t_list_n;
 
 typedef struct	s_list
 {
 	void			*content;
-	size_t			content_size;
 	struct s_list	*next;
+	size_t			content_size;
 }				t_list;
 
 size_t			ft_strlen(const char *str);
