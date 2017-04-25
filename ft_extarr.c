@@ -19,19 +19,17 @@
 
 #include "libft.h"
 
-void			**ft_extarr(void **arr, size_t num)
+void			**ft_extarr(void **old, size_t num)
 {
-	char	**new;
-	char	**old;
+	void	**new;
 	size_t	len;
 
 	new = NULL;
 	len = 0;
-	old = (char **)arr;
 	if (old)
 	{
-		new = (char **)ft_newarr(num);
-		len = ft_arrlen((void *)old);
+		new = ft_newarr(num);
+		len = ft_arrlen(old);
 		len = MIN(len, num);
 		while (len > 0)
 		{
@@ -41,7 +39,7 @@ void			**ft_extarr(void **arr, size_t num)
 		new[len] = old[len];
 		free(old);
 		old = NULL;
-		return ((void **)new);
+		return (new);
 	}
 	return (ft_newarr(num));
 }
