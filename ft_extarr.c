@@ -26,19 +26,19 @@ void			**ft_extarr(void ***old, size_t num)
 
 	new = NULL;
 	len = 0;
-	if (old)
+	if (old && *old)
 	{
 		new = ft_newarr(num);
-		len = ft_arrlen(old);
+		len = ft_arrlen(*old);
 		len = MIN(len, num);
 		while (len > 0)
 		{
-			new[len] = old[len];
+			new[len] = (*old)[len];
 			len--;
 		}
-		new[len] = old[len];
+		new[len] = (*old)[len];
 		ft_arrdel(old);
-		old = NULL;
+		*old = NULL;
 		return (new);
 	}
 	return (ft_newarr(num));
