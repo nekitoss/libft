@@ -19,7 +19,7 @@
 
 #include "libft.h"
 
-void			**ft_extarr(void **old, size_t num)
+void			**ft_extarr(void ***old, size_t num)
 {
 	void	**new;
 	size_t	len;
@@ -37,7 +37,7 @@ void			**ft_extarr(void **old, size_t num)
 			len--;
 		}
 		new[len] = old[len];
-		ft_arrdel(&old);
+		ft_arrdel(old);
 		old = NULL;
 		return (new);
 	}
