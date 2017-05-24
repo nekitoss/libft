@@ -15,6 +15,7 @@
 # define LIBFT_H
 # define ABS(x) ((x < 0) ? (-x) : (x))
 # define MIN(a, b) ((a < b) ? a : b)
+# define MAX(a, b) ((a > b) ? a : b)
 # define BUFF_SIZE 1000
 
 # include <string.h>
