@@ -114,4 +114,5 @@ void			**ft_newarr(size_t num);
 size_t			ft_arrlen(void **arr);
 void			**ft_extarr(void ***old, size_t num);
 void			ft_arrdel(void ***arr);
+void			ft_putnstr(char const *s, size_t len);
 #endif
