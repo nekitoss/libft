@@ -12,8 +12,9 @@
 
 #include "libft.h"
 
-void	ft_putnstr(char const *s, size_t len)
+ssize_t	ft_putnstr(char const *s, size_t len)
 {
 	if (s)
-		write(1, s, len);
+		return (write(1, s, len));
+	return (-1);
 }

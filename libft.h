@@ -82,7 +82,7 @@ int				ft_strnequ(char const *s1, char const *s2, size_t n);
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 void			ft_putchar(char c);
-void			ft_putstr(char const *s);
+ssize_t			ft_putstr(char const *s);
 void			ft_putendl(char const *s);
 void			ft_putnbr(long long n);
 void			ft_putchar_fd(char c, int fd);
@@ -114,5 +114,5 @@ void			**ft_newarr(size_t num);
 size_t			ft_arrlen(void **arr);
 void			**ft_extarr(void ***old, size_t num);
 void			ft_arrdel(void ***arr);
-void			ft_putnstr(char const *s, size_t len);
+ssize_t			ft_putnstr(char const *s, size_t len);
 #endif
