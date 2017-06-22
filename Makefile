@@ -98,7 +98,7 @@ INCL = ./libft.h
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@echo  "\x1b[32mlibft library compilation finished\x1b[0m"
+	@echo  "\033[32mlibft library compilation finished\033[0m"
 %.o: %.c
 	@$(CC) $(CFLAGS) -o $@ $<
 
@@ -106,10 +106,10 @@ all: $(NAME)
 	
 clean:
 	@/bin/rm -f $(OBJ)
-	@echo "\033[01;31mlibft object files deleted\x1b[0m"
+	@echo "\033[01;31mlibft object files deleted\033[0m"
 
 fclean: clean
 	@/bin/rm -f $(NAME)
-	@echo "\033[01;31mFile Libtf.a deleted\x1b[0m"
+	@echo "\033[01;31mFile Libtf.a deleted\033[0m"
 
 re: fclean all
