@@ -17,9 +17,9 @@
 
 #include "libft.h"
 
-int				ft_cntchr(char *str, char c)
+ssize_t				ft_cntchr(char *str, char c)
 {
-	int res;
+	ssize_t res;
 
 	res = 0;
 	if (str)
