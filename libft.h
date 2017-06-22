@@ -115,4 +115,5 @@ size_t			ft_arrlen(void **arr);
 void			**ft_extarr(void ***old, size_t num);
 void			ft_arrdel(void ***arr);
 ssize_t			ft_putnstr(char const *s, size_t len);
+int				ft_strcstr_f(const char *big, const char *find, int from_end);
 #endif
