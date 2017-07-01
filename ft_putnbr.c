@@ -12,20 +12,24 @@
 
 #include "libft.h"
 
-void	ft_putnbr(long long n)
+size_t	ft_putnbr(long long n)
 {
+	size_t len;
+
+	len = 0;
 	if (n < 0)
 	{
-		ft_putchar('-');
+		len += ft_putchar('-');
 		n = -n;
 	}
 	if (n < 10)
 	{
-		ft_putchar(n + '0');
+		len += ft_putchar(n + '0');
 	}
 	else
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		len += ft_putnbr(n / 10);
+		len += ft_putnbr(n % 10);
 	}
+	return (len);
 }
