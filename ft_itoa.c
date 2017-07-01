@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static char	*allocate(long nbr, size_t *len)
+static char	*allocate(long long nbr, size_t *len)
 {
 	size_t	i;
 	size_t	neg;
@@ -36,7 +36,7 @@ static char	*allocate(long nbr, size_t *len)
 	return (ft_strnew(*len));
 }
 
-static void	write_to_str(char *str, long nbr, size_t pos)
+static void	write_to_str(char *str, unsigned long long nbr, size_t pos)
 {
 	if (nbr > 9)
 	{
@@ -50,7 +50,7 @@ static void	write_to_str(char *str, long nbr, size_t pos)
 	return ;
 }
 
-char		*ft_itoa(long nbr)
+char		*ft_itoa(long long nbr)
 {
 	char	*res;
 	size_t	len;

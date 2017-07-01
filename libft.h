@@ -92,7 +92,7 @@ void			ft_putendl_fd(char const *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
-char			*ft_itoa(long n);
+char			*ft_itoa(long long n);
 
 int				ft_strcstr(const char *big, const char *skip, int from_end);
 int				ft_str_un_i_chr(const char *s, int c);
