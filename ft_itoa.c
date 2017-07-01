@@ -50,14 +50,12 @@ static void	write_to_str(char *str, long nbr, size_t pos)
 	return ;
 }
 
-char		*ft_itoa(int n)
+char		*ft_itoa(long nbr)
 {
-	long	nbr;
 	char	*res;
 	size_t	len;
 
 	len = 1;
-	nbr = n;
 	res = allocate(nbr, &len);
 	if (res)
 	{
