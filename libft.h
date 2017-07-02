@@ -119,4 +119,5 @@ ssize_t			ft_putnstr(char const *s, size_t len);
 int				ft_strcstr_f(const char *big, const char *find, int from_end);
 char			*ft_strsub_d(char **s, unsigned int start, size_t len);
 void			ft_swap_chr(char *a, char *b);
+void			ft_swap_ptr(void **a, void **b);
 #endif

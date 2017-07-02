@@ -90,7 +90,8 @@ SRC = ft_bzero.c\
 		ft_putnstr.c\
 		ft_strcstr_f.c\
 		ft_strsub_d.c\
-		ft_swap_chr.c
+		ft_swap_chr.c\
+		ft_swap_ptr.c
 
 OBJ = $(SRC:.c=.o)
 
