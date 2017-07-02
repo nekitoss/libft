@@ -55,6 +55,8 @@ char		*ft_itoa(long long nbr)
 	char	*res;
 	size_t	len;
 
+	if (nbr == LLONG_MIN)
+		return (ft_strdup("-9223372036854775808"));
 	len = 1;
 	res = allocate(nbr, &len);
 	if (res)
