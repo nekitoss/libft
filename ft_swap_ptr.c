@@ -14,12 +14,12 @@
 
 void		ft_swap_ptr(void **a, void **b)
 {
-	void	**tmp;
+	void	*tmp;
 
 	if (a && b)
 	{
-		tmp = a;
+		tmp = *a;
 		*a = *b;
-		*b = *tmp;
+		*b = tmp;
 	}
 }

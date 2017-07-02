@@ -14,12 +14,12 @@
 
 void		ft_swap_chr(char *a, char *b)
 {
-	char	*tmp;
+	char	tmp;
 
 	if (a && b)
 	{
-		tmp = a;
+		tmp = *a;
 		*a = *b;
-		*b = *tmp;
+		*b = tmp;
 	}
 }
