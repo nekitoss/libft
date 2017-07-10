@@ -26,7 +26,7 @@ char		*ft_strdelchr(char *str, size_t pos)
 		len = ft_strlen(str);
 		while (++pos < len)
 			str[pos - 1] = str[pos];
-		str[len] = '\0';
+		str[pos - 1] = '\0';
 	}
 	return (str);
 }
