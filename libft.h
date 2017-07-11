@@ -121,4 +121,6 @@ char			*ft_strsub_d(char **s, unsigned int start, size_t len);
 void			ft_swap_chr(char *a, char *b);
 void			ft_swap_ptr(void **a, void **b);
 char			*ft_strchrdel(char *str, size_t pos);
+char			*ft_itoa_base_u(unsigned long long value, unsigned int base,
+								int big_l);
 #endif
