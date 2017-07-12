@@ -47,10 +47,11 @@ static void		conv_small(unsigned long long val,
 }
 
 char			*ft_itoa_base_u(unsigned long long value,
-								unsigned int base, int big_l)
+								unsigned int base, int big_l, int prefix)
 {
 	int		i;
 	char	*str;
+	char	*tmp;
 
 	i = 0;
 	if (base < 2 || base > 16 || !(str = ft_strnew(64)))
@@ -60,5 +61,13 @@ char			*ft_itoa_base_u(unsigned long long value,
 	else
 		conv_small(value, base, &i, str);
 	str[i] = '\0';
+	if (prefix && (base == 16 || base == 8))
+	{
+		if (base == 16)
+			tmp = ft_strdup((big_l) ? "0X" : "0x");
+		else
+			tmp = ft_strdup("0");
+		str = ft_strjoin_d(&tmp, &str, 3);
+	}
 	return (str);
 }
