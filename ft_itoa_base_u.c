@@ -35,7 +35,7 @@ static void		conv_big(unsigned long long val,
 {
 	if (val >= b)
 		conv_big(val / b, b, i, str);
-	str[(*i)++] = symb_big(ABS(val % b));
+	str[(*i)++] = symb_big(val % b);
 }
 
 static void		conv_small(unsigned long long val,
@@ -43,7 +43,7 @@ static void		conv_small(unsigned long long val,
 {
 	if (val >= b)
 		conv_small(val / b, b, i, str);
-	str[(*i)++] = symb_small(ABS(val % b));
+	str[(*i)++] = symb_small(val % b);
 }
 
 char			*ft_itoa_base_u(unsigned long long value,

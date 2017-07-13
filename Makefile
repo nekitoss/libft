@@ -10,13 +10,20 @@
 #                                                                              #
 #******************************************************************************#
 
-CC = gcc
+UNAME := $(shell uname)
+
+ifeq ($(UNAME), Darwin)
+	CC = gcc
+endif
+ifeq ($(UNAME), Linux)
+	CC = c99
+endif
 
 NAME = libft.a
 
-CFLAGS = -Wall -Werror -Wextra -I$(INCL) -c
+CFLAGS = -Wall -Werror -Wextra -c
 
-SRC = ft_bzero.c\
+SRC =	ft_bzero.c\
 		ft_isdigit.c\
 		ft_memset.c\
 		ft_strcmp.c\
@@ -97,21 +104,21 @@ SRC = ft_bzero.c\
 
 OBJ = $(SRC:.c=.o)
 
-INCL = ./libft.h
-
 .PHONY: clean fclean re
 
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@echo  "\033[32mlibft library compilation finished\033[0m"
+
 %.o: %.c
 	@$(CC) $(CFLAGS) -o $@ $<
 
-all: $(NAME) 
-	
+all: $(NAME)
+
 clean:
 	@/bin/rm -f $(OBJ)
+	@/bin/rm -f libft.h.gch
 	@echo "\033[01;31mlibft object files deleted\033[0m"
 
 fclean: clean
