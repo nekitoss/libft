@@ -126,3 +126,9 @@ fclean: clean
 	@echo "\033[01;31mFile Libtf.a deleted\033[0m"
 
 re: fclean all
+
+debug:
+	@$(CC) $(CFLAGS) -g -c *.c
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
+	@echo  "\033[32mlibft library compilation finished\033[0m"
