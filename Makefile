@@ -78,7 +78,7 @@ SRC =	ft_bzero.c\
 		ft_strcstr.c\
 		ft_str_un_i_chr.c\
 		ft_str_i_chr.c\
-		ft_itoa.c\
+		ft_itoa_u.c\
 		ft_lstnew.c\
 		ft_lstadd.c\
 		ft_lstdel.c\
@@ -100,7 +100,9 @@ SRC =	ft_bzero.c\
 		ft_swap_chr.c\
 		ft_swap_ptr.c\
 		ft_strchrdel.c\
-		ft_itoa_base_u.c
+		ft_itoa_base_u.c\
+		ft_putnbr_u.c\
+		ft_revstr.c
 
 OBJ = $(SRC:.c=.o)
 
