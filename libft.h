@@ -124,4 +124,5 @@ char			*ft_strchrdel(char *str, size_t pos);
 char			*ft_itoa_base_u(unsigned long long value,
 								unsigned int base, int big_l, int prefix);
 size_t			ft_putnbr_u(size_t n);
+char			*ft_itoa_u(unsigned long long nbr);
 #endif
