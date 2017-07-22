@@ -22,6 +22,8 @@ static char	*allocate(unsigned long long nbr, size_t *len)
 			(*len)++;
 		}
 	}
+	else
+		(*len) = 1;
 	return (ft_strnew(*len));
 }
 
@@ -44,7 +46,7 @@ char		*ft_itoa_u(unsigned long long nbr)
 	char	*res;
 	size_t	len;
 
-	len = 1;
+	len = 0;
 	res = allocate(nbr, &len);
 	if (res)
 	{
