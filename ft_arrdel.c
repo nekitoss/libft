@@ -24,12 +24,15 @@ void			ft_arrdel(void ***arr)
 	void	**ptr;
 
 	ptr = *arr;
-	len = ft_arrlen(ptr);
-	while (len > 0)
+	if (ptr)
 	{
-		ft_memdel(&(ptr[len]));
-		len--;
+		len = ft_arrlen(ptr);
+		while (len > 0)
+		{
+			ft_memdel(&(ptr[len]));
+			len--;
+		}
+		free(*ptr);
+		*arr = NULL;
 	}
-	free(*ptr);
-	*arr = NULL;
 }
