@@ -63,10 +63,9 @@ char			**ft_strsplit(char const *s, char c)
 	if (!s)
 		return (NULL);
 	num_words = count_words(s, c);
-	res_arr = (char **)malloc(sizeof(char *) * (num_words + 1));
+	res_arr = (char **)ft_newarr(num_words);
 	if (res_arr)
 	{
-		res_arr[num_words] = NULL;
 		end = 0;
 		start = 0;
 		while (i < num_words)

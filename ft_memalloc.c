@@ -23,5 +23,9 @@ void	*ft_memalloc(size_t size)
 			ptr[size--] = 0;
 		*ptr = 0;
 	}
+	else
+	{
+		write(2, "\nCannot allocate memory in ft_memalloc!\n", 40);
+	}
 	return ((void *)ptr);
 }

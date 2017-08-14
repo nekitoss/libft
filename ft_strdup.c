@@ -28,7 +28,10 @@ char	*ft_strdup(const char *s1)
 		}
 	}
 	else
+	{
+		write(2, "\nCannot allocate memory in ft_strdup!\n", 38);
 		return (NULL);
+	}
 	s2[i] = '\0';
 	return (s2);
 }
