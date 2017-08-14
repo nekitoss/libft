@@ -125,4 +125,5 @@ char			*ft_itoa_base_u(unsigned long long value,
 								unsigned int base, int big_l, int prefix);
 size_t			ft_putnbr_u(size_t n);
 char			*ft_itoa_u(unsigned long long nbr);
+int				ft_is_number(char *str, size_t start, size_t end);
 #endif
