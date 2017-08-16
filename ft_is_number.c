@@ -25,6 +25,8 @@ int				ft_is_number(char *str, size_t start, size_t end)
 	len = ft_strlen(str);
 	if (str && len && start < len && start < end)
 	{
+		if (str[start] == '-' || str[start] == '+')
+			start++;
 		while (start < end && start < len)
 		{
 			if (!ft_isdigit(str[start]))
