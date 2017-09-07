@@ -136,3 +136,9 @@ debug:
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@echo  "\033[32mlibft library compilation finished\033[0m"
+
+fast:
+	@$(CC) $(CFLAGS) -O3 *.o
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
+	@echo  "\033[32mlibft library is FAST\033[0m"
