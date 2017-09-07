@@ -103,7 +103,8 @@ SRC =	ft_bzero.c\
 		ft_itoa_base_u.c\
 		ft_putnbr_u.c\
 		ft_revstr.c\
-		ft_is_number.c
+		ft_is_number.c\
+		ft_newarrint.c
 
 OBJ = $(SRC:.c=.o)
 
