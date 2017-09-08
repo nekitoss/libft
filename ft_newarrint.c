@@ -27,6 +27,7 @@ int			**ft_newarrint(size_t rows, size_t cols)
 	while (i < rows)
 	{
 		arr[i] = (int *)ft_memalloc(sizeof(int) * cols);
+		i++;
 	}
 	return (arr);
 }
