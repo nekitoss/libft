@@ -19,6 +19,8 @@ ifeq ($(UNAME), Linux)
 	CC = c99
 endif
 
+FAST = -Ofast
+
 NAME = libft.a
 
 CFLAGS = -Wall -Werror -Wextra -c
@@ -116,7 +118,7 @@ $(NAME): $(OBJ)
 	@echo  "\033[32mlibft library compilation finished\033[0m"
 
 %.o: %.c
-	@$(CC) $(CFLAGS) -o $@ $<
+	@$(CC) $(FAST) $(CFLAGS) -o $@ $<
 
 all: $(NAME)
 
@@ -136,9 +138,3 @@ debug:
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@echo  "\033[32mlibft library compilation finished\033[0m"
-
-fast:
-	@$(CC) $(CFLAGS) -O3 *.o
-	@ar rc $(NAME) $(OBJ)
-	@ranlib $(NAME)
-	@echo  "\033[32mlibft library is FAST\033[0m"
