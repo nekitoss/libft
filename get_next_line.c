@@ -20,7 +20,7 @@ void	init_it(t_list_n **ls, int fd)
 		if (!(ls[fd]))
 		{
 			write(2, "\nCannot allocate memory in gnl->init_it!\n", 41);
-			return ;
+			exit(-1);
 		}
 		(ls[fd])->str = ft_strnew(BUFF_SIZE);
 		(ls[fd])->clr = NULL;
