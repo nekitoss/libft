@@ -18,7 +18,10 @@ void	init_it(t_list_n **ls, int fd)
 	{
 		(ls[fd]) = (t_list_n *)malloc(sizeof(t_list_n));
 		if (!(ls[fd]))
+		{
 			write(2, "\nCannot allocate memory in gnl->init_it!\n", 41);
+			return ;
+		}
 		(ls[fd])->str = ft_strnew(BUFF_SIZE);
 		(ls[fd])->clr = NULL;
 		(ls[fd])->end = 0;
