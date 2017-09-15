@@ -23,8 +23,8 @@ size_t	ft_putnbr_u(size_t n)
 	}
 	else
 	{
-		len += ft_putnbr(n / 10);
-		len += ft_putnbr(n % 10);
+		len += ft_putnbr_u(n / 10);
+		len += ft_putnbr_u(n % 10);
 	}
 	return (len);
 }
